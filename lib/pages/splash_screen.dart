@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:app/generated/assets.dart';
 
 class SplashscreenWidget extends StatefulWidget {
   const SplashscreenWidget({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _SplashscreenWidgetState extends State<SplashscreenWidget> {
       body: Stack(
         children: [
           Image.asset(
-            '../assets/images/mesh-gradient.png',
+            Assets.imagesMeshGradient,
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
             fit: BoxFit.fill,
@@ -38,7 +39,7 @@ class _SplashscreenWidgetState extends State<SplashscreenWidget> {
           Align(
             alignment: const AlignmentDirectional(0, 0),
             child: Image.asset(
-              '../assets/images/iaq_icon_white.png',
+              Assets.imagesMeshGradient,
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.95,
               fit: BoxFit.contain,
