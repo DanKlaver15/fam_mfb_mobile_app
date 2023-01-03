@@ -36,7 +36,9 @@ class Assets {
   static const String iconsRodent = 'assets/icons/Rodent.png';
   static const String iconsVirus = 'assets/icons/Virus.png';
   static const String images90PercentImage = 'assets/images/90_percent_image.png';
+  static const String imagesAppIconTransparentBg = 'assets/images/app_icon_transparent_bg.png';
   static const String imagesIaqIconWhite = 'assets/images/iaq_icon_white.png';
+  static const String imagesLungsWhite = 'assets/images/lungs_white.png';
   static const String imagesMeshGradient = 'assets/images/mesh-gradient.png';
   static const String imagesSplashScreen = 'assets/images/splash_screen.png';
   static const String indoorAirQualityECigarettes1 = 'assets/infographics/indoor_air_quality/e_cigarettes1.png';
@@ -56,5 +58,7 @@ class Assets {
   static const String indoorAirQualityTobaccoAsthma2 = 'assets/infographics/indoor_air_quality/tobacco_asthma2.png';
   static const String indoorAirQualityVocs1 = 'assets/infographics/indoor_air_quality/vocs1.png';
   static const String indoorAirQualityVocs2 = 'assets/infographics/indoor_air_quality/vocs2.png';
+  static const String lottiesBreathingLungs = 'assets/lotties/breathing_lungs.json';
+  static const String pdfsEula = 'assets/pdfs/eula.pdf';
 
 }

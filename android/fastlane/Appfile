@@ -1,0 +1,2 @@
+json_key_file("/Users/dklaver/Developer/FAM/my_full_breath/mobile_app/pc-api-7130391800602105802-600-35de26ca436d.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.fam.allies.app") # e.g. com.krausefx.app
