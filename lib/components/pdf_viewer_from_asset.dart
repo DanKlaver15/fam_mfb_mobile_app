@@ -1,13 +1,11 @@
-import 'dart:ui';
-import 'package:app/generated/assets.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 
 class PDFViewerFromAsset extends StatelessWidget {
-  PDFViewerFromAsset({Key? key, required this.pdfAssetPath}) : super(key: key);
+  PDFViewerFromAsset({Key? key, required this.pdfAssetPath, required this.pdfTitle}) : super(key: key);
   final String pdfAssetPath;
+  final String pdfTitle;
   final Completer<PDFViewController> _pdfViewController =
   Completer<PDFViewController>();
   final StreamController<String> _pageCountController =
@@ -17,7 +15,8 @@ class PDFViewerFromAsset extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PDF From Asset'),
+        title: Text(pdfTitle),
+        backgroundColor: const Color.fromRGBO(15, 76, 117, 1.0),
         actions: <Widget>[
           StreamBuilder<String>(
               stream: _pageCountController.stream,
@@ -26,11 +25,11 @@ class PDFViewerFromAsset extends StatelessWidget {
                   return Center(
                     child: Container(
                       padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.blue[900],
+                        color: Color.fromRGBO(50, 130, 184, 1.0),
                       ),
-                      child: Text(snapshot.data!),
+                      child: Text(snapshot.data!, style: const TextStyle(color: Color.fromRGBO(187, 225, 250, 1.0))),
                     ),
                   );
                 }
@@ -65,6 +64,7 @@ class PDFViewerFromAsset extends StatelessWidget {
               children: <Widget>[
                 FloatingActionButton(
                   heroTag: '-',
+                  backgroundColor: const Color.fromRGBO(50, 130, 184, 1.0),
                   child: const Text('-'),
                   onPressed: () async {
                     final PDFViewController pdfController = snapshot.data!;
@@ -77,6 +77,7 @@ class PDFViewerFromAsset extends StatelessWidget {
                 ),
                 FloatingActionButton(
                   heroTag: '+',
+                  backgroundColor: const Color.fromRGBO(50, 130, 184, 1.0),
                   child: const Text('+'),
                   onPressed: () async {
                     final PDFViewController pdfController = snapshot.data!;

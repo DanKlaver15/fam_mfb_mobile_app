@@ -1,9 +1,8 @@
-import 'package:get/get.dart';
+import 'dart:convert';
 
-import '../../models/user.dart';
+import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 
 class UserController extends GetxController {
-  var email = ''.obs;
-  var password = ''.obs;
 
 }

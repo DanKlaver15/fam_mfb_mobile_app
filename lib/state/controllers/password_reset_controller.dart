@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class PasswordResetController extends GetxController {
   Future<int> forgotPassword(String email) async {
     var response = await http.post(
-      Uri.parse("http://app.famallies.org/api/resetPassword"),
+      Uri.parse('http://app.famallies.org/api/resetPassword'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -17,8 +17,3 @@ class PasswordResetController extends GetxController {
     return response.statusCode;
   }
 }
-
-
-
-
-

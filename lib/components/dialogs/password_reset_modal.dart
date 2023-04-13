@@ -31,7 +31,7 @@ class _PasswordResetModal extends State<PasswordResetModal> {
   }
 
   void startPasswordReset() async {
-    if (email == "") {
+    if (email == '') {
       setState(() {
         passwordResetWithoutEmail = true;
       });
@@ -146,7 +146,7 @@ class _PasswordResetModal extends State<PasswordResetModal> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               0, 0, 0, 12),
                                           child: Text(
-                                            "Email Sent!",
+                                            'Email Sent!',
                                             style: TextStyle(
                                               fontFamily:
                                               Assets.fontsMontserratBlack,
