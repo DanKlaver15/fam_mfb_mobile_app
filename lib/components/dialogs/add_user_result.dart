@@ -35,7 +35,7 @@ class _AddUserResultModal extends State<AddUserResultModal> {
               children: [
                 widget.statusCode == 201
                     ? const Text(
-                        'Account successfully created.',
+                        'Account successfully created.\nPlease check your email for a verification link.',
                         style: TextStyle(
                             fontFamily: Assets.fontsMontserratBlack,
                             color: Color(0xFFE5E5E5),

@@ -15,13 +15,13 @@ class _CustomDrawer extends State<CustomDrawer> {
   void getStringValuesSF(String key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      _userEmail = prefs.getString(key) ?? "";
+      _userEmail = prefs.getString(key) ?? '';
     });
   }
 
   @override
   void initState() {
-    getStringValuesSF("email");
+    getStringValuesSF('email');
     super.initState();
   }
 
@@ -40,7 +40,7 @@ class _CustomDrawer extends State<CustomDrawer> {
               decoration:
                   const BoxDecoration(color: Color.fromRGBO(15, 76, 117, 1)),
               accountName: const Text(
-                "",
+                '',
                 style: TextStyle(fontSize: 18),
               ),
               accountEmail: Text(_userEmail),
@@ -78,9 +78,9 @@ class _CustomDrawer extends State<CustomDrawer> {
             iconColor: const Color(0xFFE5E5E5),
             title: const Text('LogOut'),
             onTap: () async {
-              int res = await logout("dfdfdff");
+              int res = await logout('dfdfdff');
               if (res == 201) {
-                LoggedInUser.myUser.email = "";
+                LoggedInUser.myUser.email = '';
                 if (mounted) {
                   Navigator.of(context, rootNavigator: true)
                       .popUntil((route) => route.isFirst);

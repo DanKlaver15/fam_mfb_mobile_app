@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesWhiteAppIconTransparentBg = 'assets/images/white_app_icon_transparent_bg.png';
   static const String fontsMontserratBlack = 'assets/fonts/Montserrat-Black.ttf';
   static const String fontsMontserratBlackItalic = 'assets/fonts/Montserrat-BlackItalic.ttf';
   static const String fontsMontserratBold = 'assets/fonts/Montserrat-Bold.ttf';
@@ -41,6 +42,7 @@ class Assets {
   static const String imagesLungsWhite = 'assets/images/lungs_white.png';
   static const String imagesMeshGradient = 'assets/images/mesh-gradient.png';
   static const String imagesSplashScreen = 'assets/images/splash_screen.png';
+  static const String imagesWhiteAppIconTransparentBg = 'assets/images/white_app_icon_transparent_bg.png';
   static const String indoorAirQualityECigarettes1 = 'assets/infographics/indoor_air_quality/e_cigarettes1.png';
   static const String indoorAirQualityECigarettes2 = 'assets/infographics/indoor_air_quality/e_cigarettes2.png';
   static const String indoorAirQualityExhaust1 = 'assets/infographics/indoor_air_quality/exhaust1.png';

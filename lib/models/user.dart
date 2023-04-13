@@ -1,41 +1,19 @@
 import 'dart:core';
 
-import 'package:hive_flutter/hive_flutter.dart';
-
-@HiveType(typeId: 0)
-class User extends HiveObject {
-  @HiveField(0)
+class User{
   late final String userId;
-
-  @HiveField(1)
   late final String email;
-
-  String password;
-
-  @HiveField(2)
-  int userType;
-
-  @HiveField(3)
-  bool isEmailVerifiedFlag;
-
-  @HiveField(4)
-  bool isActiveResearchFlag;
-
-  @HiveField(5)
-  String firstName;
-
-  @HiveField(6)
-  String lastName;
-
-  DateTime dob;
-
-  @HiveField(7)
-  bool isOnboardedFlag;
-
-  DateTime createdAt;
-
-  DateTime created = DateTime.now();
-  DateTime dateOfBirth = DateTime.now();
+  late String password;
+  late int userType;
+  late bool isEmailVerifiedFlag;
+  late bool isActiveResearchFlag;
+  late String firstName;
+  late String lastName;
+  late DateTime dob;
+  late bool isOnboardedFlag;
+  late DateTime createdAt;
+  late DateTime created = DateTime.now();
+  late DateTime? dateOfBirth = DateTime.now();
 
   User({
     required this.userId,
@@ -49,6 +27,30 @@ class User extends HiveObject {
     DateTime? dobDateTime,
     this.isOnboardedFlag = true,
     DateTime? creationDateTime,
-  }) : createdAt = creationDateTime ?? DateTime.now(), dob = dobDateTime ?? DateTime.now();
-}
+  })  : createdAt = creationDateTime ?? DateTime.now(),
+        dob = dobDateTime ?? DateTime.now();
 
+  User.fromJason(Map<String, dynamic> json) {
+    userId = json['userId'];
+    email = json['email'];
+    userType = json['userType'];
+    isEmailVerifiedFlag = json['isEmailVerifiedFlag'];
+    isActiveResearchFlag = json['isActiveResearchFlag'];
+    firstName = json['firstName'];
+    lastName = json['lastName'];
+    isOnboardedFlag = json['isOnboardedFlag'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['userId'] = userId;
+    data['email'] = email;
+    data['userType'] = userType;
+    data['isEmailVerifiedFlag'] = isEmailVerifiedFlag;
+    data['isActiveResearchFlag'] = isActiveResearchFlag;
+    data['firstName'] = firstName;
+    data['lastName'] = lastName;
+    data['isOnboardedFlag'] = isOnboardedFlag;
+    return data;
+  }
+}
